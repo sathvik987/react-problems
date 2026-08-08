@@ -150,3 +150,51 @@ main {
   border-radius: 6px;
   padding: 8px 12px;
 }
+
+.feed {
+  width: 100%;
+  max-width: 420px;
+  height: 60vh;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.feed-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.feed-list li {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.feed-list h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.feed-list p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.feed-status {
+  font-size: 14px;
+  color: var(--text);
+  text-align: center;
+}
+
+.feed-sentinel {
+  height: 1px;
+}
