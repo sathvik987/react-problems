@@ -198,3 +198,202 @@ main {
 .feed-sentinel {
   height: 1px;
 }
+
+.todo-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.todo-form {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-form input {
+  font: inherit;
+  font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-form input:focus {
+  outline: none;
+  border-color: var(--accent-border);
+}
+
+.todo-editor button {
+  font: inherit;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.todo-editor button:hover:not(:disabled) {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.todo-editor button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.todo-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.todo-history {
+  margin: 0;
+  font-size: 13px;
+  text-align: center;
+  color: var(--text);
+  font-family: monospace;
+}
+
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.todo-list label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.todo-list li.done span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo-list li button {
+  padding: 2px 8px;
+  font-size: 13px;
+}
+
+.directory {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.directory > input[type="text"] {
+  font: inherit;
+  font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.directory > input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent-border);
+}
+
+.directory-sort {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.directory-sort button {
+  font: inherit;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.directory-sort button:hover:not(:disabled) {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.directory-sort button:disabled {
+  opacity: 0.5;
+  cursor: default;
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.directory-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.directory-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.directory-name {
+  font-weight: 600;
+}
+
+.directory-meta {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.directory-empty {
+  justify-content: center;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.directory-newest {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text);
+  font-family: monospace;
+  text-align: left;
+}

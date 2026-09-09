@@ -87,7 +87,7 @@ request it's describing.
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173/infinite-scroll
+npm run dev        # http://localhost:5173/problems/infinite-scroll
 npm run lint       # eslint-plugin-react-hooks will point at some of this
 npm run build      # tsc -b
 ```
