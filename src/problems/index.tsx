@@ -4,6 +4,7 @@ import { SearchBox } from "./debounced-search/SearchBox";
 import { Feed } from "./infinite-scroll/Feed";
 import { TodoEditor } from "./undo-redo/TodoEditor";
 import { EmployeeDirectory } from "./employee-directory/EmployeeDirectory";
+import { ModalDemo } from "./modal-dialog/ModalDemo";
 
 export interface Problem {
   slug: string;
@@ -49,5 +50,12 @@ export const problems: Problem[] = [
     description:
       "Filter and sort a list. Gotcha: derived state kept in useState and synced by an effect, an in-place .sort() on shared data, and index keys that break on reorder.",
     element: <EmployeeDirectory />,
+  },
+  {
+    slug: "modal-dialog",
+    title: "Modal Dialog",
+    description:
+      "Build an accessible dialog. Gotcha: rendered inline so it gets clipped, backdrop clicks that fire from inside, and a keydown listener that never gets removed.",
+    element: <ModalDemo />,
   },
 ];
