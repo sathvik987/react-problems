@@ -5,6 +5,7 @@ import { Feed } from "./infinite-scroll/Feed";
 import { TodoEditor } from "./undo-redo/TodoEditor";
 import { EmployeeDirectory } from "./employee-directory/EmployeeDirectory";
 import { ModalDemo } from "./modal-dialog/ModalDemo";
+import { CommentSection } from "./nested-comments/CommentSection";
 
 export interface Problem {
   slug: string;
@@ -57,5 +58,12 @@ export const problems: Problem[] = [
     description:
       "Build an accessible dialog. Gotcha: rendered inline so it gets clipped, backdrop clicks that fire from inside, and a keydown listener that never gets removed.",
     element: <ModalDemo />,
+  },
+  {
+    slug: "nested-comments",
+    title: "Nested Comments",
+    description:
+      "A recursive reply thread. Gotcha: an update that never recurses, a push that mutates the seed data, and one draft string shared by every reply box.",
+    element: <CommentSection />,
   },
 ];
